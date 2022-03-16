@@ -4,7 +4,7 @@
 #include "../headers/lockFreeStack.h"
 
 constexpr int THREAD_NUM = 5;
-constexpr int NODE_NUM_EACH_THREAD = 100;
+constexpr int NODE_NUM_EACH_THREAD = 1;
 
 constexpr int TOTAL_NODE_NUM = THREAD_NUM * NODE_NUM_EACH_THREAD;
 

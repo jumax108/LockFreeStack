@@ -93,7 +93,7 @@ void CLockFreeStack<T>::push(T data){
 	void* newNodePtr;
 	void* top;
 	
-	InterlockedAdd64((LONG64*)&_nodeChangeCnt, 0x0000080000000000);
+	_nodeChangeCnt += 0x0000080000000000;
 
 	do {
 		

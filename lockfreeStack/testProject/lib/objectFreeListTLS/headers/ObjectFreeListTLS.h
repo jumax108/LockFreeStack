@@ -77,9 +77,6 @@ CObjectFreeListTLS<T>::CObjectFreeListTLS(bool runConstructor, bool runDestructo
 	_runConstructor = runConstructor;
 	_runDestructor	= runDestructor;
 
-	stAllocTlsNode<T> node;
-	printf("%I64d %I64d %I64d\n", &node._data, &node._underflowCheck, (unsigned __int64)&node._data - (unsigned __int64)&node._underflowCheck);
-
 }
 
 template <typename T>
