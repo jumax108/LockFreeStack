@@ -28,7 +28,6 @@ private:
 	struct stNode{
 		
 		stNode(){
-			_data = NULL;
 			_next = nullptr;
 		}
 
