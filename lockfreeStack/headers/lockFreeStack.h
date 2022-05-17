@@ -64,9 +64,6 @@ private:
 		stNode* _newNode;
 	};
 
-	stLogLine _logLine[65536];
-	int _logCnt;
-
 };
  
 template<typename T>
@@ -85,14 +82,15 @@ CLockFreeStack<T>::~CLockFreeStack(){
 
 template <typename T>
 void CLockFreeStack<T>::push(T data){
-	
+
+	_nodeChangeCnt += 0x0000080000000000;
+
 	stNode* newNode = _nodeFreeList.allocObject();
 	newNode->_data = data;
 	
 	void* newNodePtr;
 	void* top;
 	
-	_nodeChangeCnt += 0x0000080000000000;
 
 	do {
 		
